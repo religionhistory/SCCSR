@@ -1,0 +1,243 @@
+﻿iso_a3,Country,World.Region
+AND,Andorra,Europe
+AUT,Austria,Europe
+BEL,Belgium,Europe
+CHE,Switzerland,Europe
+DEU,Germany,Europe
+FRA,France,Europe
+LIE,Liechtenstein,Europe
+LUX,Luxembourg,Europe
+MCO,Monaco,Europe
+NLD,Netherlands,Europe
+DNK,Denmark,Europe
+EST,Estonia,Europe
+FIN,Finland,Europe
+FRO,Faroe Islands,Europe
+GBR,United Kingdom,Europe
+GGY,Guernsey,Europe
+GRL,Greenland,Europe
+IMN,Isle of Man,Europe
+IRL,Ireland,Europe
+ISL,Iceland,Europe
+JEY,Jersey,Europe
+LTU,Lithuania,Europe
+LVA,Latvia,Europe
+NOR,Norway,Europe
+SWE,Sweden,Europe
+BGR,Bulgaria,Europe
+BLR,Belarus,Europe
+CZE,Czech Republic,Europe
+HUN,Hungary,Europe
+MDA,Moldova,Europe
+POL,Poland,Europe
+ROU,Romania,Europe
+SVK,Slovakia,Europe
+UKR,Ukraine,Europe
+ALB,Albania,Europe
+BIH,Bosnia and Herzegovina,Europe
+CYP,Cyprus,Europe
+ESP,Spain,Europe
+GIB,Gibraltar,Europe
+GRC,Greece,Europe
+HRV,Croatia,Europe
+ITA,Italy,Europe
+KOS,Kosovo,Europe
+MKD,Macedonia,Europe
+MLT,Malta,Europe
+MNE,Montenegro,Europe
+PRT,Portugal,Europe
+SMR,San Marino,Europe
+SRB,Serbia,Europe
+SVN,Slovenia,Europe
+ALA,Aland,Europe
+VAT,Vatican,Europe
+BEN,Benin,Africa
+BFA,Burkina Faso,Africa
+CIV,Ivory Coast,Africa
+CPV,Cape Verde,Africa
+GHA,Ghana,Africa
+GIN,Guinea,Africa
+GMB,The Gambia,Africa
+GNB,Guinea Bissau,Africa
+LBR,Liberia,Africa
+MLI,Mali,Africa
+MRT,Mauritania,Africa
+NER,Niger,Africa
+NGA,Nigeria,Africa
+SEN,Senegal,Africa
+SLE,Sierra Leone,Africa
+TGO,Togo,Africa
+DZA,Algeria,Africa
+EGY,Egypt,Africa
+LBY,Libya,Africa
+MAR,Morocco,Africa
+ESH,Western Sahara,Africa
+SDN,Sudan,Africa
+TUN,Tunisia,Africa
+BDI,Burundi,Africa
+COM,Comoros,Africa
+DJI,Djibouti,Africa
+ERI,Eritrea,Africa
+ETH,Ethiopia,Africa
+REU,Réunion,Africa
+MYT,Mayotte,Africa
+KEN,Kenya,Africa
+MDG,Madagascar,Africa
+MOZ,Mozambique,Africa
+MUS,Mauritius,Africa
+MWI,Malawi,Africa
+RWA,Rwanda,Africa
+SOM,Somalia,Africa
+SYC,Seychelles,Africa
+TZA,Tanzania,Africa
+UGA,Uganda,Africa
+ZMB,Zambia,Africa
+ZWE,Zimbabwe,Africa
+ATF,French Southern and Antarctic Lands,Africa
+BWA,Botswana,Africa
+HMD,Heard Island and McDonald Islands,Africa
+LSO,Lesotho,Africa
+NAM,Namibia,Africa
+SHN,Saint Helena,Africa
+SWZ,Swaziland,Africa
+ZAF,South Africa,Africa
+AGO,Angola,Africa
+CAF,Central African Republic,Africa
+CMR,Cameroon,Africa
+COD,Democratic Republic of the Congo,Africa
+COG,Republic of Congo,Africa
+GAB,Gabon,Africa
+GNQ,Equatorial Guinea,Africa
+STP,Sao Tome and Principe,Africa
+TCD,Chad,Africa
+SSD,South Sudan,Africa
+ARG,Argentina,South America
+BOL,Bolivia,South America
+BRA,Brazil,South America
+CHL,Chile,South America
+COL,Colombia,South America
+ECU,Ecuador,South America
+FLK,Falkland Islands,South America
+GUF,French Guiana,South America
+GUY,Guyana,South America
+PER,Peru,South America
+PRY,Paraguay,South America
+SGS,South Georgia and South Sandwich Islands,South America
+SUR,Suriname,South America
+URY,Uruguay,South America
+VEN,Venezuela,South America
+BLZ,Belize,North America
+CRI,Costa Rica,North America
+GTM,Guatemala,North America
+HND,Honduras,North America
+MEX,Mexico,North America
+NIC,Nicaragua,North America
+PAN,Panama,North America
+SLV,El Salvador,North America
+ABW,Aruba,North America
+AIA,Anguilla,North America
+ATG,Antigua and Barbuda,North America
+BHS,The Bahamas,North America
+BLM,Saint Barthelemy,North America
+BRB,Barbados,North America
+CUB,Cuba,North America
+CUW,Curaçao,North America
+CYM,Cayman Islands,North America
+DMA,Dominica,North America
+DOM,Dominican Republic,North America
+MTQ,Martinique,North America
+GLP,Guadeloupe,North America
+GRD,Grenada,North America
+HTI,Haiti,North America
+JAM,Jamaica,North America
+KNA,Saint Kitts and Nevis,North America
+LCA,Saint Lucia,North America
+MAF,Saint Martin,North America
+MSR,Montserrat,North America
+NLD,Caribbean Netherlands,North America
+PRI,Puerto Rico,North America
+SXM,Sint Maarten,North America
+TCA,Turks and Caicos Islands,North America
+TTO,Trinidad and Tobago,North America
+VCT,Saint Vincent and the Grenadines,North America
+VGB,British Virgin Islands,North America
+VIR,United States Virgin Islands,North America
+BMU,Bermuda,North America
+CAN,Canada,North America
+SPM,Saint Pierre and Miquelon,North America
+USA,United States of America,North America
+TUR,Turkey,Southwest Asia
+YEM,Yemen,Southwest Asia
+SAU,Saudi Arabia,Southwest Asia
+ARE,United Arab Emirates,Southwest Asia
+ISR,Israel,Southwest Asia
+JOR,Jordan,Southwest Asia
+PSE,Palestine,Southwest Asia
+QAT,Qatar,Southwest Asia
+KWT,Kuwait,Southwest Asia
+IRQ,Iraq,Southwest Asia
+IRN,Iran,Southwest Asia
+LBN,Lebanon,Southwest Asia
+SYR,Syria,Southwest Asia
+OMN,Oman,Southwest Asia
+ARM,Armenia,Southwest Asia
+AZE,Azerbaijan,Southwest Asia
+GEO,Georgia,Southwest Asia
+BHR,Bahrain,Southwest Asia
+IND,India,South Asia
+LKA,Sri Lanka,South Asia
+PAK,Pakistan,South Asia
+AFG,Afghanistan,South Asia
+NPL,Nepal,South Asia
+BGD,Bangladesh,South Asia
+BTN,Bhutan,South Asia
+MDV,Maldives,South Asia
+IOT,British Indian Ocean Territory,South Asia
+CHN,China,East Asia
+HKG,Hong Kong S.A.R.,East Asia
+MAC,Macao S.A.R,East Asia
+JPN,Japan,East Asia
+KOR,South Korea,East Asia
+PRK,North Korea,East Asia
+TWN,Taiwan,East Asia
+RUS,Russia,Central Eurasia
+MNG,Mongolia,Central Eurasia
+KAZ,Kazakhstan,Central Eurasia
+KGZ,Kyrgyzstan,Central Eurasia
+TKM,Turkmenistan,Central Eurasia
+UZB,Uzbekistan,Central Eurasia
+TJK,Tajikistan,Central Eurasia
+MMR,Myanmar,Southeast Asia
+THA,Thailand,Southeast Asia
+KHM,Cambodia,Southeast Asia
+LAO,Laos,Southeast Asia
+VNM,Vietnam,Southeast Asia
+BRN,Brunei,Southeast Asia
+IDN,Indonesia,Southeast Asia
+SGP,Singapore,Southeast Asia
+PHL,Philippines,Southeast Asia
+MYS,Malaysia,Southeast Asia
+TLS,East Timor,Southeast Asia
+AUS,Australia,Oceania-Australia
+NZL,New Zealand,Oceania-Australia
+PNG,Papua New Guinea,Oceania-Australia
+NCL,New Caledonia,Oceania-Australia
+PLW,Palau,Oceania-Australia
+ASM,American Samoa,Oceania-Australia
+FJI,Fiji,Oceania-Australia
+FSM,Federated States of Micronesia,Oceania-Australia
+GUM,Guam,Oceania-Australia
+KIR,Kiribati,Oceania-Australia
+MHL,Marshall Islands,Oceania-Australia
+MNP,Northern Mariana Islands,Oceania-Australia
+NFK,Norfolk Island,Oceania-Australia
+NIU,Niue,Oceania-Australia
+TON,Tonga,Oceania-Australia
+NRU,Nauru,Oceania-Australia
+PCN,Pitcairn Islands,Oceania-Australia
+PYF,French Polynesia,Oceania-Australia
+SLB,Solomon Islands,Oceania-Australia
+VUT,Vanuatu,Oceania-Australia
+WLF,Wallis and Futuna,Oceania-Australia
+WSM,Samoa,Oceania-Australia
+COK,Cook Islands,Oceania-Australia

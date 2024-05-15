@@ -1,0 +1,4 @@
+data_raw/answerset.csv
+data_clean/answerset.csv
+data_dump/postgres.dump_2024_04_07.tar
+outdated

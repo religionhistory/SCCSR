@@ -1,0 +1,10 @@
+version: '2'
+services:
+  postgress-postgresql:
+    container_name: drh_db
+    image: postgis/postgis:14-3.2
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
