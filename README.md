@@ -18,7 +18,7 @@ Extract and preprocess data for Database of Religious History (DRH) data dump.
 * Only published entries included. 
 
 ## Question Relation
-* Currently we map groups of related questions to a number without special justification (1, 2, ..., n). 
+* Currently we map groups of related questions to a number without special justification (1, 2, ..., n). Probably should change this to lowest Question ID within the group (as Willis suggested). Ted was a bit concerned about this, but I think this makes sense. There needs to be some rule for how we create them to make this stable I think. 
 * 417 question_id are not in questionrelations (but in answerset). Some of these are definitely mistakes. 
 
 ## World Regions
@@ -34,4 +34,7 @@ Extract and preprocess data for Database of Religious History (DRH) data dump.
 * Some weird values here (e.g., duplications) that we fix (but we should check up on how this happens). 
 
 ## Entity tags
-* Entity tags are a mess. I am not sure whether this is something we want to fix.
+* The organization seems weird to me, for instance it is possible to have the "Catholicism" tag without "Christian Traditions". These are at the same level in the hierarchy (which explains how this is possible), but would seem more natural if "Christian Traditions" was at a higher level (level 2 which it is currently) and "Catholicism" was a child tag (i.e., at level 3 in the hierarchy). 
+
+## Data that is missing
+* editor_id, editor_name in entry_data.csv (add to SQL extraction script). 
