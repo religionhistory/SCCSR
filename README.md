@@ -18,7 +18,7 @@ Extract and preprocess data for Database of Religious History (DRH) data dump.
 * Only published entries included. 
 
 ## Question Relation
-* Currently we map groups of related questions to a number without special justification (1, 2, ..., n). Probably should change this to lowest Question ID within the group (as Willis suggested). Ted was a bit concerned about this, but I think this makes sense. There needs to be some rule for how we create them to make this stable I think. 
+* Currently mapping to lowest Question ID within group. 
 * 417 question_id are not in questionrelations (but in answerset). Some of these are definitely mistakes. 
 
 ## World Regions
@@ -38,3 +38,6 @@ Extract and preprocess data for Database of Religious History (DRH) data dump.
 
 ## Data that is missing
 * editor_id, editor_name in entry_data.csv (add to SQL extraction script). 
+
+## Column names
+* Make sure that we agree on the column names used. 
