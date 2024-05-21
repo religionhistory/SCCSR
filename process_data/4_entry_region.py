@@ -19,7 +19,7 @@ countries_regions = countries_regions.rename(
 region_data = pd.read_csv("../data_raw/region_data.csv")
 
 # We are only interested in the region data that is present in our data
-# This would be eitehr in entrydata or answerset
+# This would be either in entrydata or answerset
 entrydata = pd.read_csv("../data_raw/entry_data.csv")
 answerset = pd.read_csv("../data_raw/answerset.csv")
 region_entrydata = entrydata["region_id"].unique()
