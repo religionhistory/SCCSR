@@ -4,6 +4,29 @@ import networkx as nx
 # Load questionrelation
 questionrelation = pd.read_csv("../data_raw/questionrelation.csv")
 
+""" potential edits 
+add_rows = [
+    (5258, 6361),  # Place v1 to v1.2
+    (6759, 4652),  # Text v0.1 to v1.0
+    (6860, 7700),  # Text v0.1 to v1.0
+    (7560, 8400),  # Text v0.1 to v1.0
+    (7561, 8401),  # Text v0.1 to v1.0
+    (7562, 8402),  # Text v0.1 to v1.0
+    (7563, 8403),  # Text v0.1 to v1.0
+    (6943, 7783),  # Text v0.1 to v1.0
+    (7889, 6674),  # Text v1.0 to Place v1.2
+    (6869, 5168),  # Text v0.1 to Group v6
+    (7709, 5168),  # Text v1.0 to Group v6
+]
+
+rows_remove = [5257, 6923, 6924, 6925, 6928, 6931, 6932]
+
+values_rename = {
+    6925: 7772,
+    6932: 7765,
+}
+"""
+
 # Build the graph
 G = nx.Graph()
 for _, row in questionrelation.iterrows():

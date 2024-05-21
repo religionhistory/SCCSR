@@ -17,14 +17,15 @@ Extract and preprocess data for Database of Religious History (DRH) data dump.
 * Entries with  "Polity" not included currently. 
 * Only published entries included. 
 
-## Question Relation
-* Currently mapping to lowest Question ID within group. 
-* 417 question_id are not in questionrelations (but in answerset). Some of these are definitely mistakes. 
-
 ## World Regions
 * World region assigned based on overlap with countries (that have assigned world region)
 * 4 regions lacking geom object (will not have associated world region)
 * 27 regions with geoms that are not "completed" (we are using these anyways currently) 
+
+# Known issues
+## Question Relation
+* Currently mapping to lowest Question ID within group. 
+* Working to correct missing relations between questions.
 
 ## Answerset
 * Filtering out answers that have "history_parent_id" in the database (which remoevs outdated answers)
