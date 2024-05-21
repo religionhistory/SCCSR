@@ -88,7 +88,7 @@ Name/Property | Datatype | Description
 `entrytag_name` | `string` | 
 `entrytag_level` | `int` | `entrytag_id` level in hierarchy
 `entrytag_path` | `string` | `entrytag_name`[`entrytag_id`]->`entrytag_name`[`entrytag_id`]
-`approved` | `bool` | True/False
+`approved` | `bool` | `True` or `False`
 `parent_entrytag_id` | `float` | Missing if `entrytag_id` has no parent
 
 ## <a name="table-questionrelationcsv"></a>Table [questionrelation.csv](./questionrelation.csv)
@@ -101,4 +101,4 @@ Some questions are related across polls (either the exact same question or a sim
 Name/Property | Datatype | Description
  --- | --- | --- 
 `question_id` | `int` | 
-`related_question_id` | `int` | 
+`related_question_id` | `int` | lowest `question_id` in group 
