@@ -54,6 +54,8 @@ year_to | `int` |
 region_id | `int` | 
 expert_id | `int` | 
 expert_name | `string` | 
+editor_id | `int` | 
+editor_name | `string` |
 date_created | `string` | YYYY-MM-DD HH:MM:SS.mmm &plusmn;HHMM
 date_modified | `string` | YYYY-MM-DD HH:MM:SS.mmm &plusmn;HHMM
 data_source | `string` | 
