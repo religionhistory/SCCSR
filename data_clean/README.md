@@ -73,7 +73,6 @@ Name/Property | Datatype | Description
 `region_name` | `string` | 
 `region_description` | `string` | 
 `gis_region` | `string` | MULTIPOLYGON 
-`completed` | `bool` | `gis_region` completed (True/False)
 `world_region` | `string` | 10 world regions (link: xxx)
 
 ## <a name="table-entity_tagscsv"></a>Table [entity_tags.csv](./entity_tags.csv)
@@ -90,7 +89,6 @@ Name/Property | Datatype | Description
 `entrytag_name` | `string` | 
 `entrytag_level` | `int` | `entrytag_id` level in hierarchy
 `entrytag_path` | `string` | `entrytag_name`[`entrytag_id`]->`entrytag_name`[`entrytag_id`]
-`approved` | `bool` | `True` or `False`
 `parent_entrytag_id` | `float` | Missing if `entrytag_id` has no parent
 
 ## <a name="table-questionrelationcsv"></a>Table [questionrelation.csv](./questionrelation.csv)

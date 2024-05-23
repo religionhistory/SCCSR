@@ -18,7 +18,7 @@ entity_tags = entity_tags.rename(
     }
 )
 
-# re-order columns
+# re-order and select
 entity_tags = entity_tags[
     [
         "entry_id",
@@ -26,7 +26,7 @@ entity_tags = entity_tags[
         "entrytag_name",
         "entrytag_level",
         "entrytag_path",
-        "approved",
+        # "approved",
         "parent_entrytag_id",
     ]
 ]

@@ -78,14 +78,14 @@ unique_world_region_metadata = unique_world_region.merge(
 )
 unique_world_region_metadata = unique_world_region_metadata.sort_values("region_id")
 
-# re-order columns
+# re-order columns and select
 unique_world_region_metadata = unique_world_region_metadata[
     [
         "region_id",
         "region_name",
         "region_description",
         "gis_region",
-        "completed",
+        # "completed",
         "world_region",
     ]
 ]
