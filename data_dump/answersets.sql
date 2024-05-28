@@ -1,19 +1,30 @@
 SELECT DISTINCT 
-    b1.question_id, q1.question_name, q2.parent_question_id, q2.parent_question, b1.entry_id,
+    b1.question_id, q1.question_name, 
     CASE WHEN text_input is null THEN a1.name
          ELSE CONCAT(a1.name, ': ', text_input)
     END as answer,
-    a1.value,
+    a1.value, 
+    b1.notes,
+    q2.parent_question_id, 
+    q2.parent_question,
     CASE WHEN parent_text_input is null THEN parent_name
          ELSE CONCAT(parent_name, ': ', parent_text_input)
     END as parent_answer,
-    b3.parent_answer_value, b1.notes, b1.year_from, b1.year_to, 
+    b3.parent_answer_value, 
+    b1.entry_id, 
+    en2.entry_name, 
+    p1.poll_id,
+    p1.poll, 
+    b1.year_from, 
+    b1.year_to, 
     concat(branching_question_name, ' ', string_agg(branching_question, ', ' ORDER BY branching_question)) AS branching_question,
-    b1.region_id, e1.expert_id, 
+    b1.region_id, 
+    e1.expert_id, 
 	CASE WHEN expert_source_name is not null THEN expert_source_name
          ELSE expert_name
     END as expert_name,
-	e1.editor_id, COALESCE(e5.regionaleditor_name, e6.managingeditor_name) AS editor_name,
+	e1.editor_id, 
+	COALESCE(e5.regionaleditor_name, e6.managingeditor_name) AS editor_name,
     a3.date_published, b1.date_created, b1.date_modified
 FROM  
     public.polls_answer a1
@@ -86,5 +97,5 @@ ON (b1.poll_id = p1.poll_id)
 WHERE a3.published IS TRUE 
   AND p1.poll != 'Polity' 
   AND b1.history_parent_id IS NULL
-GROUP by b1.question_id, q1.question_name, a1.name, a1.value, b1.notes, a1.text_input, en3.data_source, b1.entry_id, b1.region_id, b1.year_from, b1.year_to, br3.branching_question_name, e1.expert_id, e2.expert_name, expert_source_name, e1.editor_id, editor_name, q2.parent_question_id, q2.parent_question, b3.parent_answer_value, b3.parent_name, b3.parent_text_input, b1.date_modified, b1.date_created, a3.date_published
+GROUP by p1.poll, p1.poll_id, b1.question_id, q1.question_name, a1.name, a1.value, b1.notes, a1.text_input, en3.data_source, b1.entry_id, en2.entry_name, b1.region_id, b1.year_from, b1.year_to, br3.branching_question_name, e1.expert_id, e2.expert_name, expert_source_name, e1.editor_id, editor_name, q2.parent_question_id, q2.parent_question, b3.parent_answer_value, b3.parent_name, b3.parent_text_input, b1.date_modified, b1.date_created, a3.date_published
 ORDER BY b1.entry_id ASC;

@@ -14,14 +14,17 @@ Name/Property | Datatype | Description
  --- | --- | --- 
 `question_id` | `int` | 
 `question_name` | `string` | 
-`parent_question_id` | `float` | missing if `question_id` has no parent
-`parent_question` | `string` | missing if `question_id` has no parent
-`entry_id` | `int` | 
 `answer` | `string` | 
 `answer_value` | `int` | `1` = `Yes`, `0` = `No`, `-1` = (`I don't know`) or (`Field doesn't know`)
+`notes` | `string` | 
+`parent_question_id` | `float` | missing if `question_id` has no parent
+`parent_question` | `string` | missing if `question_id` has no parent
 `parent_answer` | `string` | 
 `parent_answer_value` | `int` | `1` = `Yes`, `0` = `No`, `-1` = (`I don't know`) or (`Field doesn't know`)
-`notes` | `string` | 
+`entry_id` | `int` | 
+`entry_name` | `string` |
+`poll_id` | `poll_id` |
+`poll_name` | `poll_name` |
 `year_from` | `int` | 
 `year_to` | `int` | 
 `branching_question` | `string` | `Non-elite (common populace)`, `Elite`, `Religious Specialists`
@@ -102,3 +105,4 @@ Name/Property | Datatype | Description
  --- | --- | --- 
 `question_id` | `int` | 
 `related_question_id` | `int` | lowest `question_id` in group 
+`poll_name` | `string` | 

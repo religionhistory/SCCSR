@@ -48,10 +48,10 @@ for component in connected_components:
 
 result_df = pd.DataFrame(new_labels)
 
-# filter out cases that are not in our dataset
+# now add the poll name and filter out cases that are not in our dataset
 answerset = pd.read_csv("../data_clean/answerset.csv")
-answerset = answerset[["question_id"]].drop_duplicates()
-result_df = result_df[result_df["question_id"].isin(answerset["question_id"])]
+answerset = answerset[["question_id", "poll_name"]].drop_duplicates()
+result_df = result_df.merge(answerset, on="question_id", how="inner")
 
 # now some of them do not have any relations
 # remove if there is no relation to other questions
