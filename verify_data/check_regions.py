@@ -16,7 +16,6 @@ not_completed = region_data[
 not_completed = not_completed.rename(columns={"completed": "region_completed"})
 not_completed["region_missing"] = not_completed["gis_region"].isna()
 
-
 not_completed = not_completed[
     [
         "entry_id",
@@ -29,4 +28,3 @@ not_completed = not_completed[
 ]
 not_completed = not_completed.sort_values("entry_id")
 not_completed.to_csv("../data_clean/region_not_completed.csv", index=False)
-# only worry about the ones that are in the data

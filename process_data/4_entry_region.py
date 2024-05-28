@@ -84,9 +84,9 @@ unique_world_region_metadata = unique_world_region_metadata[
         "region_id",
         "region_name",
         "region_description",
+        "world_region",
         "gis_region",
         # "completed",
-        "world_region",
     ]
 ]
 

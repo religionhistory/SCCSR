@@ -75,8 +75,8 @@ Name/Property | Datatype | Description
 `region_id` | `int` | Primary key
 `region_name` | `string` | 
 `region_description` | `string` | 
-`gis_region` | `string` | MULTIPOLYGON 
 `world_region` | `string` | 10 world regions (link: xxx)
+`gis_region` | `string` | MULTIPOLYGON 
 
 ## <a name="table-entity_tagscsv"></a>Table [entity_tags.csv](./entity_tags.csv)
 
