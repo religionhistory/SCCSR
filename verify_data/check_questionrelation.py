@@ -5,12 +5,12 @@ import pandas as pd
 answerset = pd.read_csv("../data_clean/answerset.csv")
 entry_data = pd.read_csv("../data_clean/entry_data.csv")
 answerset_sub = answerset[
-    ["question_id", "question_name", "entry_id"]
+    ["question_id", "question_name", "entry_id", "parent_question"]
 ].drop_duplicates()
 entry_data_sub = entry_data[["entry_id", "poll_name"]].drop_duplicates()
 answerentry = pd.merge(answerset_sub, entry_data_sub, on="entry_id", how="inner")
 answerentry = answerentry[
-    ["question_id", "question_name", "poll_name"]
+    ["question_id", "question_name", "parent_question", "poll_name"]
 ].drop_duplicates()
 
 answerset["question_id"].nunique()  # 3389
@@ -30,10 +30,9 @@ no_relation = answerentry[
     ~answerentry["question_id"].isin(questionrelation["question_id"])
 ]
 
-no_relation.groupby("poll_name").size()  # mostly Text (v1.0) and some text (v0.1)
-no_relation.sort_values("question_name").to_csv(
-    "missing_questionrelations.csv", index=False
-)
+no_relation.sort_values(
+    ["question_name", "parent_question", "question_id"], ascending=[True, True, True]
+).to_csv("missing_questionrelations.csv", index=False)
 
 """
 # Try to just map by question name
