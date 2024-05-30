@@ -34,20 +34,28 @@ no_relation.sort_values(
     ["question_name", "parent_question", "question_id"], ascending=[True, True, True]
 ).to_csv("missing_questionrelations.csv", index=False)
 
-"""
-# Try to just map by question name
-no_relation_grouped = (
-    no_relation.groupby("question_name")
-    .size()
-    .reset_index(name="count")
-    .sort_values("count", ascending=False)
+# there are a couple tricky ones
+# need to get parents of parents
+question_parents = questionrelation_merge[
+    ["question_name", "parent_question"]
+].drop_duplicates()
+question_parents = question_parents.rename(
+    columns={"question_name": "parent_question", "parent_question": "parent_parent"}
 )
-no_relation_grouped_name_match = no_relation_grouped[no_relation_grouped["count"] > 1]
 
-# Okay so these 119 question names have direct mappings but are not related
-no_relation_grouped_name_poll = no_relation_grouped_name_match.merge(
-    answerentry, on="question_name", how="inner"
-)
-no_relation_grouped_name_poll
-no_relation_grouped_name_poll.to_csv("missing_questionrelations.csv", index=False)
-"""
+focus_questions = [6925, 6932, 7765, 7772, 6773, 7612, 7613, 6882, 7722, 6881, 7721]
+focus_questions = no_relation[no_relation["question_id"].isin(focus_questions)]
+focus_questions.merge(question_parents, on="parent_question", how="left")
+
+# rachel proposed problems
+focus_questions = [5257, 5684, 6361, 5258]
+questionrelation_merge[questionrelation_merge["question_id"].isin(focus_questions)]
+no_relation[no_relation["question_id"] == 5258]
+
+
+questionrelation_merge[questionrelation_merge["question_id"] == 5257]
+questionrelation[questionrelation["question_id"] == 5257]
+questionrelation[questionrelation["related_question_id"] == 5257]
+questionrelation[questionrelation["question_id"] == 5684]
+questionrelation_merge[questionrelation_merge["question_id"] == 5257]
+questionrelation_merge[questionrelation_merge["question_id"] == 5684]

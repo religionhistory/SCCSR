@@ -75,7 +75,11 @@ Name/Property | Datatype | Description
 `region_id` | `int` | Primary key
 `region_name` | `string` | 
 `region_description` | `string` | 
-`world_region` | `string` | 10 world regions (link: xxx)
+`region_tag_id` | `float` | 
+`region_tag_name` | `string` |
+`parent_tag_id` | `float` |
+`path` | `string` | path in tagging hierarchy
+`world_region` | `string` | 11 world regions (based on overlap: https://worldmapper.org/maps/unesco-total-sites-2017/)
 `gis_region` | `string` | MULTIPOLYGON 
 
 ## <a name="table-entity_tagscsv"></a>Table [entity_tags.csv](./entity_tags.csv)
