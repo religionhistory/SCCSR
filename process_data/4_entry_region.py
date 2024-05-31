@@ -116,5 +116,8 @@ unique_world_region_metadata = unique_world_region_metadata[
     ]
 ]
 
+# ensure that no duplicates exist
+unique_world_region_metadata = unique_world_region_metadata.drop_duplicates()
+
 # save data
 unique_world_region_metadata.to_csv("../data_clean/region_data.csv", index=False)

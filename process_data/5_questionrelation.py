@@ -64,6 +64,9 @@ result_df = result_df[
     ~result_df["related_question_id"].isin(missing_relation["related_question_id"])
 ]
 
+# ensure no duplication
+result_df = result_df.drop_duplicates()
+
 # now sort values and save
 result_df = result_df.sort_values(by=["related_question_id", "question_id"])
 result_df.to_csv("../data_clean/questionrelation.csv", index=False)

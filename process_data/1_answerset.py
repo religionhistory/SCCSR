@@ -52,4 +52,6 @@ answerset["branching_question"] = answerset["branching_question"].map(
 # rename columns
 answerset = answerset.rename(columns={"value": "answer_value"})
 
+# ensure that no duplicates exist
+answerset = answerset.drop_duplicates()
 answerset.to_csv("../data_clean/answerset.csv", index=False)

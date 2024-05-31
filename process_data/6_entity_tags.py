@@ -31,5 +31,8 @@ entity_tags = entity_tags[
     ]
 ]
 
+# ensure no duplicates
+entity_tags = entity_tags.drop_duplicates()
+
 # save
 entity_tags.to_csv("../data_clean/entity_tags.csv", index=False)

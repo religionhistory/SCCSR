@@ -1,4 +1,5 @@
 data_raw/answerset.csv
+data_raw/answerset_en.csv
 data_raw/entity_tags.csv
 data_raw/entry_data.csv
 data_raw/questionrelation.csv

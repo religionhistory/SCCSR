@@ -29,4 +29,6 @@ remaining 2 inconsistencies are okay;
 1049: the relevant entry has 2 editors in the answerset (we only list one in the entry data)
 """
 
+# ensure that no duplicates exist
+entry_data = entry_data.drop_duplicates()
 entry_data.to_csv("../data_clean/entry_data.csv", index=False)
