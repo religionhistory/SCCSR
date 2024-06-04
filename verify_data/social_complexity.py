@@ -19,11 +19,6 @@ social_complexity_recoded = social_complexity_recoded.rename(
 # get the relevant questions (ID and formulation differ by poll)
 question_ids = [3492, 5174, 7547, 8387]
 answerset = pd.read_csv("../data_clean/answerset.csv")
-answerset = answerset[
-    answerset["question_name"].str.contains(
-        "Society of religious group that produced the text"
-    )
-]
 answerset.groupby(["question_name", "question_id", "poll_name"]).size()
 answerset_social_complexity = answerset[answerset["question_id"].isin(question_ids)]
 answerset_social_complexity_subset = answerset_social_complexity[
@@ -34,6 +29,7 @@ answerset_social_complexity_subset = answerset_social_complexity[
         "entry_name",
         "poll_name",
         "answer",
+        "editor_name",
     ]
 ].drop_duplicates()
 
@@ -41,6 +37,8 @@ answerset_social_complexity_subset = answerset_social_complexity[
 answerset_social_complexity = social_complexity_recoded.merge(
     answerset_social_complexity_subset, on=["entry_id", "entry_name"], how="left"
 )
+pd.set_option("display.max_colwidth", None)
+answerset_social_complexity[answerset_social_complexity["entry_id"] == 1542]
 
 # find the cases where experts are having problems
 modify_problems = answerset_social_complexity[
@@ -72,8 +70,8 @@ text_poll_problems = text_poll_problems[
         "poll_name",
     ]
 ]
+text_poll_problems
 
-# things that we should change in answerset instead
 
 """
 the ones with weird signs.

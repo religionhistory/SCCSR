@@ -110,3 +110,21 @@ Name/Property | Datatype | Description
 `question_id` | `int` | 
 `related_question_id` | `int` | lowest `question_id` in group 
 `poll_name` | `string` | 
+
+
+## <a name="table-literacy_recode.csv"></a>Table [literacy_recode.csv](./questionrelation.csv)
+
+Editorially recoded values for "Written Language" answers for the "Religious Group (v5)" and "Religious Group (v6)" polls. Specifically, the table codes cases where we believe that either a "No" answer or a missing answer should be "Yes" for the following questions: 
+* Is a non-religion-specific written language available to the group's adherents through an institution(s) other than the religious group in question?
+* Is a non-religion-specific written language used by the group's adherents through an institution(s) other than the religious group in question?
+
+### Columns
+
+Name/Property | Datatype | Description
+ --- | --- | --- 
+`entry_id` | `int` | 
+`entry_name` | `string` |
+`question_id` | `int` | 
+`question_name` | `string` |
+`answer` | `string` | 
+`answer_value` | `int` |
