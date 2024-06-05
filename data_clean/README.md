@@ -128,3 +128,20 @@ Name/Property | Datatype | Description
 `question_name` | `string` |
 `answer` | `string` | 
 `answer_value` | `int` |
+
+## <a name="table-social_complexity_recode.csv"></a>Table [social_complexity_recode.csv](./questionrelation.csv)
+
+Editorially recoded values for "Social Complexity" answers for the "Religious Group" and "Religious Text" polls. 
+* Society of religious group that produced the text is best characterized as 
+* The society to which the religious group belongs is best characterized as (please choose one) 
+
+### Columns
+
+Name/Property | Datatype | Description
+ --- | --- | --- 
+`entry_id` | `int` | 
+`entry_name` | `string` |
+`question_id` | `int` | 
+`question_name` | `string` |
+`answer` | `string` | 
+`notes` | `string` |

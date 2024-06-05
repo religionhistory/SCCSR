@@ -19,12 +19,6 @@ social_complexity = social_complexity.drop(
     columns=["Original Code", "Suggested Code"]
 ).reset_index(drop=True)
 
-# find the valid answers from group poll
-answerset = pd.read_csv("../data_clean/answerset.csv")
-question_id = [3492, 5174]
-answerset = answerset[answerset["question_id"].isin(question_id)]
-answerset["answer"].unique()
-
 # recode answers
 answer_mapping = {
     "state": "A state",
@@ -54,5 +48,26 @@ social_complexity["notes"] = np.where(
     social_complexity["notes"],
 )
 
+# need to add the question_id and question_name
+# need to map this through poll name
+answerset = pd.read_csv("../data_clean/answerset.csv")
+question_ids = [3492, 5174, 7547, 8387]
+answerset_social_complexity = answerset[answerset["question_id"].isin(question_ids)]
+question_poll = answerset_social_complexity[
+    ["question_id", "question_name", "poll_name"]
+].drop_duplicates()
+entry_data = pd.read_csv("../data_clean/entry_data.csv")
+entry_data = entry_data[["entry_id", "poll_name"]].drop_duplicates()
+grid_values = question_poll.merge(entry_data, on="poll_name", how="inner")
+
+# now we merge inner on entry
+social_complexity = social_complexity.merge(grid_values, on="entry_id", how="inner")
+
+# select and order
+social_complexity = social_complexity[
+    ["entry_id", "entry_name", "question_id", "question_name", "answer", "notes"]
+]
+social_complexity = social_complexity.sort_values("entry_id")
+
 # save
-social_complexity.to_csv("../data_clean/social_complexity.csv", index=False)
+social_complexity.to_csv("../data_clean/social_complexity_recode.csv", index=False)
