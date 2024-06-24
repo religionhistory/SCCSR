@@ -21,14 +21,14 @@ region_data_unique = region_data[["region_id", "gis_region"]].drop_duplicates()
 
 # We are only interested in the region data that is present in our data
 # This would be either in entrydata or answerset
-entrydata = pd.read_csv("../data_raw/entry_data.csv")
-answerset = pd.read_csv("../data_raw/answerset.csv")
+entrydata = pd.read_csv("../data_clean/entry_data.csv")
+answerset = pd.read_csv("../data_clean/answerset.csv")
 region_entrydata = entrydata["region_id"].unique()
 region_answerset = answerset["region_id"].unique()
 region_total = np.union1d(region_entrydata, region_answerset)
 region_data_unique = region_data_unique[
     region_data_unique["region_id"].isin(region_total)
-]  # 1254
+]  # 1325
 region_data_notnull = region_data_unique[region_data_unique["gis_region"].notnull()]
 
 # now we create geopandas dataframe
@@ -70,18 +70,20 @@ non_overlapping = non_overlapping[["region_id", "world_region"]]
 
 # concatenate with the intersection data
 unique_world_region = pd.concat([region_intersection_mode, non_overlapping])
-unique_world_region["region_id"].nunique()  # 1250
+unique_world_region["region_id"].nunique()  # 1321
 
 # fix missing cases
 assigned_world_region = unique_world_region["region_id"].unique().tolist()
 all_regions = region_data_unique["region_id"].unique().tolist()
 missing_world_region = list(set(all_regions) - set(assigned_world_region))  # n=4
+
+answerset[answerset["region_id"] == 32]
 code_missing_regions = [
     # region_id, world_region
-    [2170, "Africa"],
-    [2192, "South America"],
-    [2274, "Southwest Asia"],
-    [2295, "Global"],
+    [2170, "Africa"],  # Sub Saharan Africa
+    [2274, "Southwest Asia"],  # Land of Israel and Babylonia
+    [2295, "Global"],  # The world
+    [2453, "Africa"],  # Hausaland
 ]
 unique_world_region = pd.concat(
     [

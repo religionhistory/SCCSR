@@ -117,21 +117,6 @@ recoding = [
     [2273, "available", 1],
 ]
 
-# comments (do we really want to code this?)
-comments = [
-    # entry id, question, comment
-    [
-        928,
-        "distinct",
-        "Distinct written language for Lakota as a whole, but not distinct for the Ghost Dance movement.",
-    ],
-    [
-        770,
-        "distinct",
-        "There are arguably specific written languages for Thai Buddhists (Thai-Pali and Khom script) but they are not distinct to this religious group",
-    ],
-]
-
 # load full data
 answerset = pd.read_csv("../data_clean/answerset.csv")
 

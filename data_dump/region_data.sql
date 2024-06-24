@@ -1,5 +1,5 @@
 SELECT distinct 
-       grgr.id AS region_id, 
+	grgr.id AS region_id, 
        grgr.name AS region_name,
        grgr.description as region_description,
        grgr.geom AS gis_region,

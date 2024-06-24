@@ -21,7 +21,7 @@ SELECT
         ELSE au.expert_name 
     END AS expert_name,
     ae.editor_id,
-    COALESCE(aure.regionaleditor_name, aume.managingeditor_name) AS editor_name,
+	COALESCE(aure.regionaleditor_name, aume.managingeditor_name) as editor_name,
     pe.date_created,
     pe.date_modified,
     pd.data_source

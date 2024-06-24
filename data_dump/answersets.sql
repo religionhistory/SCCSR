@@ -1,27 +1,30 @@
 SELECT DISTINCT 
     b1.question_id, q1.question_name, 
-    CASE WHEN text_input is null THEN a1.name
-         ELSE CONCAT(a1.name, ': ', text_input)
-    END as answer,
+    CASE 
+        WHEN text_input IS NOT NULL AND a1.name_en IS NOT NULL THEN CONCAT(a1.name_en, ': ', text_input)
+        WHEN text_input IS NOT NULL AND a1.name_en IS NULL THEN CONCAT(a1.name, ': ', text_input)
+        WHEN text_input IS NULL AND a1.name_en IS NOT NULL THEN a1.name_en
+        ELSE a1.name
+    END AS answer,
     a1.value, 
     b1.notes,
     q2.parent_question_id, 
     q2.parent_question,
     CASE WHEN parent_text_input is null THEN parent_name
-         ELSE CONCAT(parent_name, ': ', parent_text_input)
+        ELSE CONCAT(parent_name, ': ', parent_text_input)
     END as parent_answer,
     b3.parent_answer_value, 
     b1.entry_id, 
     en2.entry_name, 
     p1.poll_id,
-    p1.poll, 
+    p1.poll_name, 
     b1.year_from, 
     b1.year_to, 
     concat(branching_question_name, ' ', string_agg(branching_question, ', ' ORDER BY branching_question)) AS branching_question,
     b1.region_id, 
     e1.expert_id, 
 	CASE WHEN expert_source_name is not null THEN expert_source_name
-         ELSE expert_name
+        ELSE expert_name
     END as expert_name,
 	e1.editor_id, 
 	COALESCE(e5.regionaleditor_name, e6.managingeditor_name) AS editor_name,
@@ -92,10 +95,10 @@ LEFT JOIN
     (SELECT id AS parentanswer_id, name AS parent_name, text_input AS parent_text_input, value AS parent_answer_value FROM public.polls_answer) b3
 ON (a3.parent_answerset_id = b3.parentanswer_id) 
 LEFT JOIN
-    (SELECT id AS poll_id, name AS poll FROM public.polls_poll) p1
+    (SELECT id AS poll_id, name AS poll_name FROM public.polls_poll) p1
 ON (b1.poll_id = p1.poll_id) 
 WHERE a3.published IS TRUE 
-  AND p1.poll != 'Polity' 
-  AND b1.history_parent_id IS NULL
-GROUP by p1.poll, p1.poll_id, b1.question_id, q1.question_name, a1.name, a1.value, b1.notes, a1.text_input, en3.data_source, b1.entry_id, en2.entry_name, b1.region_id, b1.year_from, b1.year_to, br3.branching_question_name, e1.expert_id, e2.expert_name, expert_source_name, e1.editor_id, editor_name, q2.parent_question_id, q2.parent_question, b3.parent_answer_value, b3.parent_name, b3.parent_text_input, b1.date_modified, b1.date_created, a3.date_published
+    AND p1.poll_name != 'Polity' 
+    AND b1.history_parent_id IS NULL
+GROUP by p1.poll_name, p1.poll_id, b1.question_id, q1.question_name, a1.name, a1.name_en, a1.value, b1.notes, a1.text_input, en3.data_source, b1.entry_id, en2.entry_name, b1.region_id, b1.year_from, b1.year_to, br3.branching_question_name, e1.expert_id, e2.expert_name, expert_source_name, e1.editor_id, editor_name, q2.parent_question_id, q2.parent_question, b3.parent_answer_value, b3.parent_name, b3.parent_text_input, b1.date_modified, b1.date_created, a3.date_published
 ORDER BY b1.entry_id ASC;

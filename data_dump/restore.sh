@@ -1,7 +1,7 @@
 DB_CONTAINER=postgress-postgresql
 DB_NAME=ubc-drh
 DB_USER=postgres
-LOCAL_DUMP_PATH="./postgres.dump_2024_04_07.tar"
+LOCAL_DUMP_PATH="./postgres_dump_20_06_2024.tar"
 
 # Start the database container
 docker compose up -d "${DB_CONTAINER}"

@@ -1,5 +1,4 @@
 data_raw/answerset.csv
-data_raw/answerset_en.csv
 data_raw/entity_tags.csv
 data_raw/entry_data.csv
 data_raw/questionrelation.csv
@@ -11,7 +10,5 @@ data_clean/entity_tags.csv
 data_clean/entry_data.csv
 data_clean/questionrelation.csv
 data_clean/region_data.csv
-data_dump/postgres.dump_2024_04_07.tar
-verify_data
-outdated
+data_dump/postgres_dump_20_06_2024.tar
 .DS_Store

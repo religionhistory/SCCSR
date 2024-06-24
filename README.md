@@ -1,30 +1,15 @@
 # Overview
-Extract and preprocess data for Database of Religious History (DRH) data dump.
+Extract and preprocess data for Standard Cross-Cultural Sample of Religion (SCCSR v1). 
 * Scripts to extract data in `data_dump` (extracted to `data_raw`).
 * Preprocessing done in `process_data` (writing to `data_clean`). 
-* Checking done in `verify_data`. 
-* Currently based on data-dump from 2024-04-07 (re-run with updated data)
+* Based on data-dump from 2024-06-20 (question relations extracted through API on 2024-06-24).
 
 # Outcome
-* data_clean/answerset.csv (linking: entry_id, question_id, region_id)
-* data_clean/entry_data.csv (linking: entry_id, region_id)
-* data_clean/entity_tags.csv (linking: entry_id)
-* data_clean/questionrelation.csv (linking: question_id)
-* data_clean/region_data.csv (linking: region_id)
-
-# Notes
-## Exclusion criteria
-* Entries with  "Polity" not included currently. 
-* Only published entries included. 
-
-# Known issues
-## Question Relation
-* Currently mapping to lowest Question ID within group. 
-* Working to correct missing relations between questions.
-
-## Answerset
-* We need to document how rows are missing when parent answers are not "Yes". 
-
-## Branching questions
-* Some weird values here (e.g., duplications) that we fix (but we should check up on how this happens). 
-
+* data_clean/drh_tables.zip containing: 
+	* answerset.csv 
+	* entry_data.csv
+	* entity_tags.csv 
+	* questionrelation.csv 
+	* region_data.csv 
+	* literacy_recode.csv
+	* social_complexity_recode.csv
