@@ -10,5 +10,5 @@ data_clean/entity_tags.csv
 data_clean/entry_data.csv
 data_clean/questionrelation.csv
 data_clean/region_data.csv
-data_dump/postgres_dump_20_06_2024.tar
+data_dump/postgres_dump_23_06_2024.tar
 .DS_Store
