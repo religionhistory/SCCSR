@@ -8,64 +8,64 @@ This table lists the complete answerset for published entries in the Database of
 
 Table has no primary key since the answerset is across questions (`question_id`) and entries (`entry_id`); additionally, distinct answers can be given for particular date ranges (`year_from`, `year_to`), regions (`region_id`), and `branching_questions`. Different experts (`expert_id`) can provide different answers to the same (`entry_id`, `question_id`) combination, or the same expert might provide different answers. Some questions ask the expert to select all that apply or to list all sources (which can result in multiple answers for the same `entry_id`, `question_id` combination).
 
-### Columns
+### Variables
 
 Name/Property | Datatype | Description
  --- | --- | --- 
-`question_id` | `int` | 
-`question_name` | `string` | 
-`answer` | `string` | 
-`answer_value` | `int` | `1` = `Yes`, `0` = `No`, `-1` = (`I don't know`) or (`Field doesn't know`)
-`notes` | `string` | 
-`parent_question_id` | `float` | missing if `question_id` has no parent
-`parent_question` | `string` | missing if `question_id` has no parent
-`parent_answer` | `string` | 
-`parent_answer_value` | `int` | `1` = `Yes`, `0` = `No`, `-1` = (`I don't know`) or (`Field doesn't know`)
-`entry_id` | `int` | 
-`entry_name` | `string` |
-`poll_id` | `poll_id` |
-`poll_name` | `poll_name` |
-`year_from` | `int` | 
-`year_to` | `int` | 
+`question_id` | `int` | Standardised question ID
+`question_name` | `string` | Standardised question name
+`answer` | `string` | Answer to the question. The majority of questions are categorical, with the possible answers `Yes`, `No`, `Field doesn't know` and `I don't know`.     
+`answer_value` | `int` | Answer value to the question `1` = `Yes`, `0` = `No`, `-1` = (`I don't know`) or (`Field doesn't know`)
+`notes` | `string` | Extra descriptive information about the answer
+`parent_question_id` | `float` | Standardised parent question ID. This is missing if `question_id` has no parent.
+`parent_question` | `string` | Standardised parent question name. This is missing if `question_id` has no parent.
+`parent_answer` | `string` | Answer to the parent question.
+`parent_answer_value` | `int` | Answer value to the parent question `1` = `Yes`, `0` = `No`, `-1` = (`I don't know`) or (`Field doesn't know`)
+`entry_id` | `int` | Entry ID
+`entry_name` | `string` | Name of the entry
+`poll_id` | `poll_id` | Poll ID of the poll the entry answers
+`poll_name` | `poll_name` | Name of the poll the entry answers
+`year_from` | `int` | Year from which the answer applies from
+`year_to` | `int` | Year from which the answer applies to 
 `branching_question` | `string` | `Non-elite (common populace)`, `Elite`, `Religious Specialists`
-`region_id` | `int` | 
-`expert_id` | `int` | 
-`expert_name` | `string` | 
-`editor_id` | `int` | 
-`editor_name` | `string` | 
-`date_published` | `string` | YYYY-MM-DD HH:MM:SS.mmm &plusmn;HHMM
-`date_created` | `string` | YYYY-MM-DD HH:MM:SS.mmm &plusmn;HHMM
-`date_modified` | `string` | YYYY-MM-DD HH:MM:SS.mmm &plusmn;HHMM
+`region_id` | `int` | Region ID of the region corresponding to the answer
+`expert_id` | `int` | Expert ID of the Expert who authored the answer
+`expert_name` | `string` | Name of the Expert who authored the answer
+`editor_id` | `int` | Editor ID of the Editor who oversaw the answer creation
+`editor_name` | `string` | Name of the Editor who oversaw the answer creation
+`date_published` | `string` | Date answer was published in the format YYYY-MM-DD HH:MM:SS.mmm &plusmn;HHMM
+`date_created` | `string` | Date answer was created in the format YYYY-MM-DD HH:MM:SS.mmm &plusmn;HHMM
+`date_modified` | `string` | Date answer was last modified in the format YYYYY-MM-DD HH:MM:SS.mmm &plusmn;HHMM
 
 ## <a name="table-entry_datacsv"></a>Table [entry_data.csv](./entry_data.csv)
 
 This table lists metadata for entries published in the Database of Religious History (DRH). Connected to other tables through `entry_id`, `region_id` columns.
 
-### Columns
+### Variables
 
 Name/Property | Datatype | Description
  --- | --- | --- 
-entry_id | `int` | Primary key
-entry_name | `string` | 
-poll_id | `int` | 
-poll_name | `string` | 
-description | `string` | 
-year_from | `int` | 
-year_to | `int` | 
-region_id | `int` | 
-expert_id | `int` | 
-expert_name | `string` | 
-editor_id | `int` | 
-editor_name | `string` |
-date_created | `string` | YYYY-MM-DD HH:MM:SS.mmm &plusmn;HHMM
-date_modified | `string` | YYYY-MM-DD HH:MM:SS.mmm &plusmn;HHMM
+entry_id | `int` | Entry ID
+entry_name | `string` | Name of the entry
+poll_id | `int` | Poll ID of the poll the entry answers
+poll_name | `string` | Name of the poll the entry answers
+description | `string` | Description of the entry
+year_from | `int` | Start year of the entry
+year_to | `int` | End year of the entry
+region_id | `int` | Region ID of the region corresponding to the entry
+expert_id | `int` | Expert ID of the Expert who authored the entry
+expert_name | `string` | Name of the Expert who authored the entry
+editor_id | `int` | Editor ID of the Editor who oversaw the entry creation
+editor_name | `string` | Name of the Editor who oversaw the entry creation
+date_created | `string` | Date entry was created in the format YYYY-MM-DD HH:MM:SS.mmm &plusmn;HHMM
+date_modified | `string` | Date entry was last modified in the format YYYY-MM-DD HH:MM:SS.mmm &plusmn;HHMM
 data_source | `string` | 
 
 ## <a name="table-region_datacsv"></a>Table [region_data.csv](./region_data.csv)
 
 This table lists region information. The `gis_region` column contains the raw multipolyogons. Regions are assigned a unique `world_region` based on country overlap.
 
-### Columns
+### Variables
 
 Name/Property | Datatype | Description
  --- | --- | --- 
@@ -77,14 +77,14 @@ Name/Property | Datatype | Description
 `parent_tag_id` | `float` |
 `path` | `string` | path in tagging hierarchy
 `world_region` | `string` | 11 world regions (https://worldmapper.org/maps/unesco-total-sites-2017/)
-`gis_region` | `string` | MULTIPOLYGON 
+`gis_region` | `string` | POLYGON/MULTIPOLYGON 
 
 ## <a name="table-entity_tagscsv"></a>Table [entity_tags.csv](./entity_tags.csv)
 
 This table lists entity tags. Tags are hierarchically structured (see `entrytag_level` and `entrytag_path` columns).
 An entry (`entry_id`) can have multiple tags. 
 
-### Columns
+### Variables
 
 Name/Property | Datatype | Description
  --- | --- | --- 
@@ -99,7 +99,7 @@ Name/Property | Datatype | Description
 
 This table lists relations between questions. The Database of Religious History (DRH) employs multiple polls. Some questions are related across polls (either the exact same question or a similar question). 
 
-### Columns
+### Variables
 
 Name/Property | Datatype | Description
  --- | --- | --- 
@@ -114,7 +114,7 @@ Editorially recoded values for "Written Language" answers for the "Religious Gro
 * Is a non-religion-specific written language available to the group's adherents through an institution(s) other than the religious group in question?
 * Is a non-religion-specific written language used by the group's adherents through an institution(s) other than the religious group in question?
 
-### Columns
+### Variables
 
 Name/Property | Datatype | Description
  --- | --- | --- 
@@ -131,7 +131,7 @@ Editorially recoded values for "Social Complexity" answers for the "Religious Gr
 * Society of religious group that produced the text is best characterized as 
 * The society to which the religious group belongs is best characterized as (please choose one) 
 
-### Columns
+### Variables
 
 Name/Property | Datatype | Description
  --- | --- | --- 
