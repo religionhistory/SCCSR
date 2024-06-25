@@ -1,8 +1,8 @@
 # Overview
-Extract and preprocess data for Standard Cross-Cultural Sample of Religion (SCCSR.v1) provided under CC-BY-4.0 license. 
-* Scripts to extract data in `data_dump` (extracted to `data_raw`). `postgres_dump_20_06_2024.tar` too large to include raw. 
-* Preprocessing done in `process_data` (writing to `data_clean`). 
-* Based on data dump from 2024-06-23.
+Data curation for Standard Cross-Cultural Sample of Religion (SCCSR.v1) provided under CC-BY-4.0 license. 
+
+* Scripts to extract data in `data_dump` (extracted to `data_raw`). The database backup is too large the include, so analysis can be reproduced from the extracted tables in `data_raw`. 
+* Data curation done in `process_data` (writing to `data_clean`). 
 * The preprocessed tables are documented in the README file in `data_clean`. 
 
 # How to cite
@@ -10,3 +10,6 @@ When using DRH data, please reference the DRH site ([religiondatabase.org](https
 
 # Affiliation and Funding
 The DRH is housed at the University of British Columbia, and has been funded by generous grants from Canada’s Social Sciences and Humanities Research Council (SSHRC), The John Templeton Foundation, and Templeton Religion Trust.
+
+# Version 1
+Based on database backup from 2024-06-23
