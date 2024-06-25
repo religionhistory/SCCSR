@@ -76,7 +76,7 @@ Name/Property | Datatype | Description
 `region_tag_name` | `string` |
 `parent_tag_id` | `float` |
 `path` | `string` | path in tagging hierarchy
-`world_region` | `string` | 11 world regions (based on overlap: https://worldmapper.org/maps/unesco-total-sites-2017/)
+`world_region` | `string` | 11 world regions (https://worldmapper.org/maps/unesco-total-sites-2017/)
 `gis_region` | `string` | MULTIPOLYGON 
 
 ## <a name="table-entity_tagscsv"></a>Table [entity_tags.csv](./entity_tags.csv)
