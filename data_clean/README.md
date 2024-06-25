@@ -41,8 +41,6 @@ Name/Property | Datatype | Description
 
 This table lists metadata for entries published in the Database of Religious History (DRH). Connected to other tables through `entry_id`, `region_id` columns.
 
-Note: should we include editor here as well? We probably should.
-
 ### Columns
 
 Name/Property | Datatype | Description
@@ -65,8 +63,7 @@ data_source | `string` |
 
 ## <a name="table-region_datacsv"></a>Table [region_data.csv](./region_data.csv)
 
-This table lists region information. The `gis_region` column contains the raw multipolyogons.
-Regions have been assigned a unique `world_region` based on country overlap (world regions taken from xxx). 
+This table lists region information. The `gis_region` column contains the raw multipolyogons. Regions are assigned a unique `world_region` based on country overlap.
 
 ### Columns
 
@@ -100,8 +97,7 @@ Name/Property | Datatype | Description
 
 ## <a name="table-questionrelationcsv"></a>Table [questionrelation.csv](./questionrelation.csv)
 
-This table lists relations between questions. The Database of Religious History (DRH) employs multiple polls.
-Some questions are related across polls (either the exact same question or a similar question). 
+This table lists relations between questions. The Database of Religious History (DRH) employs multiple polls. Some questions are related across polls (either the exact same question or a similar question). 
 
 ### Columns
 
@@ -114,7 +110,7 @@ Name/Property | Datatype | Description
 
 ## <a name="table-literacy_recode.csv"></a>Table [literacy_recode.csv](./questionrelation.csv)
 
-Editorially recoded values for "Written Language" answers for the "Religious Group (v5)" and "Religious Group (v6)" polls. Specifically, the table codes cases where we believe that either a "No" answer or a missing answer should be "Yes" for the following questions: 
+Editorially recoded values for "Written Language" answers for the "Religious Group (v5)" and "Religious Group (v6)" polls. Specifically, the table codes cases where we believe that either a "No" answer (or a missing answer) should be "Yes" for the following questions: 
 * Is a non-religion-specific written language available to the group's adherents through an institution(s) other than the religious group in question?
 * Is a non-religion-specific written language used by the group's adherents through an institution(s) other than the religious group in question?
 
