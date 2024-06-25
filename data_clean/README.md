@@ -1,6 +1,6 @@
-# Database of Religious History (DRH) data dump
+# Standard Cross-Cultural Sample of Religion 
 
-(some description of the DRH)
+To access the curated data tables unzip the file `drh_tables.zip`. See documentation below.
 
 ## <a name="table-valuescsv"></a>Table [answerset.csv](./answerset.csv)
 
