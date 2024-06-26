@@ -141,7 +141,7 @@ Name/Property | Datatype | Description
 `answer` | `string` | Recoded answer with the possible values `An empire`, `A state`, `A chiefdom` or `A tribe`
 `notes` | `string` | Who verified the recoding decision, either `expert confirmed` or `editorial decision`
 
-## [Other Answer Value Coding]
+## Other Answer Value Coding
 
 The answer value coding of catergorical questions without `Yes`, `No`, `Field doesn't know` and `I don't know` answers.
 
