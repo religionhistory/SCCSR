@@ -1,7 +1,7 @@
 # Overview
 Data curation for Standard Cross-Cultural Sample of Religion (SCCSR.v1) provided under CC-BY-4.0 license. 
 
-This consists of seven `.csv` files of different elements of the database. The variables of each table are documented in the [README file](https://github.com/religionhistory/drh-data-dump/tree/main/data_clean) in `data_clean`. 
+This consists of seven `.csv` files of different elements of the database. The variables of each table are documented in the [README file](https://github.com/religionhistory/drh-data-dump/blob/main/data_clean/README.md) in `data_clean`. 
 
 
 Name | Description
