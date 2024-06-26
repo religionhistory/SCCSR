@@ -15,7 +15,7 @@ Name/Property | Datatype | Description
 `question_id` | `int` | Standardised question ID
 `question_name` | `string` | Standardised question name
 `answer` | `string` | Answer to the question. The majority of questions are categorical, with the possible answers `Yes`, `No`, `Field doesn't know` and `I don't know`.     
-`answer_value` | `int` | Answer value to the question. For the majority of answers the coding is `1` = `Yes`, `0` = `No`, `-1` = (`I don't know`) or (`Field doesn't know`), and for most other freetext, numeric, `specify` or answers the coding is `-1`. Other answer value coding can be found [here](other_answer_value).
+`answer_value` | `int` | Answer value to the question. For the majority of answers the coding is `1` = `Yes`, `0` = `No`, `-1` = (`I don't know`) or (`Field doesn't know`), and for most other freetext, numeric, `specify` or answers the coding is `-1`. Other answer value coding can be found [here](#other-answer-value-coding).
 `notes` | `string` | Extra descriptive information about the answer
 `parent_question_id` | `float` | Standardised parent question ID. This is missing if `question_id` has no parent.
 `parent_question` | `string` | Standardised parent question name. This is missing if `question_id` has no parent.
@@ -141,7 +141,7 @@ Name/Property | Datatype | Description
 `answer` | `string` | Recoded answer with the possible values `An empire`, `A state`, `A chiefdom` or `A tribe`
 `notes` | `string` | Who verified the recoding decision, either `expert confirmed` or `editorial decision`
 
-## <a name="other_answer_value"></a>Other Answer Value Coding 
+## [Other Answer Value Coding]
 
 The answer value coding of catergorical questions without `Yes`, `No`, `Field doesn't know` and `I don't know` answers.
 
