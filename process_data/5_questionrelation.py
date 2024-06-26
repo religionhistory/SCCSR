@@ -30,9 +30,25 @@ answerset = pd.read_csv("../data_clean/answerset.csv")
 answerset = answerset[["question_id", "poll_name"]].drop_duplicates()
 result_df = result_df.merge(answerset, on="question_id", how="inner")
 
-
 # ensure no duplication
 result_df = result_df.drop_duplicates()
+
+# now sort values and save
+result_df = result_df.sort_values(by=["related_question_id", "question_id"])
+
+# check if there are missing question ids (this should not actually happen, but we have n=2)
+unique_question_ids = result_df["question_id"].unique()
+unique_answerset_ids = answerset["question_id"].unique()
+
+# missing question ids
+missing_question_ids = list(set(unique_answerset_ids) - set(unique_question_ids))
+
+# find these in the answerset & relate to self
+missing_question_ids_df = answerset[answerset["question_id"].isin(missing_question_ids)]
+missing_question_ids_df["related_question_id"] = missing_question_ids_df["question_id"]
+
+# merge with the result_df
+result_df = pd.concat([result_df, missing_question_ids_df], sort=False)
 
 # now sort values and save
 result_df = result_df.sort_values(by=["related_question_id", "question_id"])
