@@ -15,7 +15,7 @@ Name/Property | Datatype | Description
 `question_id` | `int` | Standardised question ID
 `question_name` | `string` | Standardised question name
 `answer` | `string` | Answer to the question. The majority of questions are categorical, with the possible answers `Yes`, `No`, `Field doesn't know` and `I don't know`.     
-`answer_value` | `int` | Answer value to the question. For the majority of answers the coding is `1` = `Yes`, `0` = `No`, `-1` = (`I don't know`) or (`Field doesn't know`), and for most other freetext, numeric, `specify` or answers the coding is `-1`. 
+`answer_value` | `int` | Answer value to the question. For the majority of answers the coding is `1` = `Yes`, `0` = `No`, `-1` = (`I don't know`) or (`Field doesn't know`), and for most other freetext, numeric, `specify` or answers the coding is `-1`. Other answer value coding can be found [here](other_answer_value).
 `notes` | `string` | Extra descriptive information about the answer
 `parent_question_id` | `float` | Standardised parent question ID. This is missing if `question_id` has no parent.
 `parent_question` | `string` | Standardised parent question name. This is missing if `question_id` has no parent.
@@ -140,3 +140,79 @@ Name/Property | Datatype | Description
 `question_name` | `string` | Standardised question name
 `answer` | `string` | Recoded answer with the possible values `An empire`, `A state`, `A chiefdom` or `A tribe`
 `notes` | `string` | Who verified the recoding decision, either `expert confirmed` or `editorial decision`
+
+## <a name="other_answer_value"></a>Other Answer Value Coding 
+
+The answer value coding of catergorical questions without `Yes`, `No`, `Field doesn't know` and `I don't know` answers.
+
+**Nature of religious group [please select one]:**
+
+`answer_value` | `answer`
+--- | ---
+1 | Small religious group (not related to larger religious group)
+2 | Small religious group (one of many small religious groups in sample region)
+3 | Small religious group (seen as being part of a related larger religious group)
+4 | Small religious group (trying to be organized-controlled by larger religious group)
+5 | Small religious group (actively discouraged-suppressed by larger religious group(s))
+6 | Large religious group (unknown relationship to other religious groups, or presence of other religious groups unknown)
+7 | Large religious group (intolerant of other affiliations)
+8 | Large religious group (with smaller religious groups not officially allowed but in practice tolerated)
+9 | Large official religious group with smaller religious groups also openly allowed
+
+**Moral norms apply to:**
+`answer_value` | `answer`
+--- | ---
+1 | Only specialized religious class
+2 | Only one class of society
+3 | Only one gender
+4 | All individuals within society (excepting slaves, aliens)
+5 | All individuals within society
+6 | All individuals within contemporary world
+7 | All individuals (any time period)
+
+**How strict is pilgrimage:**
+
+`answer_value` | `answer`
+--- | ---
+0 | Optional (rare)
+1 | Optional (common)
+2 | Obligatory for some
+3 | Obligatory for all
+
+**What is the nature of this distinction:**
+
+`answer_value` | `answer`
+--- | ---
+1 | Weakly present
+2 | Present (but not emphasized)
+3 | Present and clear
+4 | Strongly present and highlighted
+
+**The society to which the religious group belongs is best characterized as (please choose one):**
+
+`answer_value` | `answer`
+--- | ---
+0 | Other [specify in comments]
+1 | A band 
+2 | A tribe
+3 | A chiefdom
+4 | A state
+5 | An empire
+
+**Please characterize the forms/level of food production [choose all that apply]: / Please characterize the forms/levels of food production [choose all that apply]:**
+
+`answer_value` | `answer`
+--- | ---
+0 | Other [specify in comments]
+1 | Gathering
+2 | Hunting (including marine animals)
+3 | Fishing
+4 | Pastoralism
+4 | Patoralism
+4 | Small-scale agriculture
+5 | Cannibalism
+5 | Small-scale agriculture
+5 | Large-scale agriculture [organized irrigation systems, etc.]
+6 | Small-scale agriculture / horticultural gardens or orchards
+6 | Large-scale agriculture [organized irrigation systems, etc.]
+7 | Large-scale agriculture (e.g., monocropping, organized irrigation systems)
