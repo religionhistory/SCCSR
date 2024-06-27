@@ -1,7 +1,23 @@
 # Overview
-Data curation for Standard Cross-Cultural Sample of Religion (SCCSR.v1) provided under CC-BY-4.0 license. 
+The Standard Cross-Cultural Sample of Religion is a product of the [Database of Religious History(DRH)](https://religiondatabase.org). 
+The DRH is a qualitative-quantitative encyclopedic database of historical religious data across time and space. 
+Data in contributed to the project by academic [experts](https://religiondatabase.org/landing/about/people/experts) and overseen by a panel of [editors](https://religiondatabase.org/landing/about/people/editors).
+The data takes the form of answers (provided by experts) to a long list of standard questions grounded in time and space.
+More details on the intracies of the data are found below.
 
-This consists of seven `.csv` files of different elements of the database. The variables of each table are documented in the [README file](https://github.com/religionhistory/drh-data-dump/blob/main/data_clean/README.md) in `data_clean`. 
+The Standard Cross-Cultural Sample of Religion is “standard” in a different way than its namesake, The Standard Cross-Cultural Sample (SCCS). 
+The SCCS was designed to control for region and cultural relatedness. 
+Because of our mostly bottom-up, expert-driven data gathering method, DRH data is heavily overweighted in certain time/space regions. 
+Analysts will have to control for this as they see fit<!--; we have included some suggestions [suggested scripts?] for methods that we have used in the past-->. 
+
+On the other hand, DRH data is “standard” in the sense that whatever Group, Place of Text is being portrayed, experts are answering a standardized set of questions, allowing a degree of comparison and quantitative analysis that has simply never been possible before. 
+As the DRH grows, top-down data-gathering pushes will be targeted at underrepresented regions of the world, with the goal of making future versions of the SCCSR more and more comprehensive. 
+
+The Standard Cross-Cultural Sample of Religion (SCCSR.v1) is provided under CC-BY-4.0 license. 
+
+The primary entry into the data is via the files provided in the `data_clean/` directorty.
+This consists of seven `.csv` files of different elements of the database. 
+The variables of each table are documented in the [README file](https://github.com/religionhistory/drh-data-dump/blob/main/data_clean/README.md) in `data_clean/`. 
 
 
 Name | Description
