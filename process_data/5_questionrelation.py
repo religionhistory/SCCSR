@@ -4,6 +4,10 @@ import networkx as nx
 # Load questionrelation
 questionrelation = pd.read_csv("../data_raw/questionrelation.csv")
 
+# Add a missing link between question_id 8002 and 3233
+new_row = pd.DataFrame([{"question_id": 8002, "related_question_id": 3233}])
+questionrelation = pd.concat([questionrelation, new_row], ignore_index=True)
+
 # Build the graph
 G = nx.Graph()
 for _, row in questionrelation.iterrows():
