@@ -3,8 +3,6 @@ import pandas as pd
 entry_data = pd.read_csv("../data_raw/entry_data.csv")
 
 # manually fix cases where expert is wrong
-# this happens when the person creating the entry is not the expert
-entry_data[entry_data["entry_id"] == 338]
 # (entry_id, new_expert_id, new_expert_name)
 updates = [
     (216, 164, "Beate Pongratz-Leisten"),
