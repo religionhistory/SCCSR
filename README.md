@@ -1,9 +1,8 @@
 # Overview
 The Standard Cross-Cultural Sample of Religion is a product of the [Database of Religious History(DRH)](https://religiondatabase.org). 
 The DRH is a qualitative-quantitative encyclopedic database of historical religious data across time and space. 
-Data in contributed to the project by academic [experts](https://religiondatabase.org/landing/about/people/experts) and overseen by a panel of [editors](https://religiondatabase.org/landing/about/people/editors).
-The data takes the form of answers (provided by experts) to a long list of standard questions grounded in time and space.
-More details on the intracies of the data are found below.
+Data are contributed to the project by academic [experts](https://religiondatabase.org/landing/about/people/experts) and overseen by a panel of [editors](https://religiondatabase.org/landing/about/people/editors).
+The data take the form of answers (provided by experts) to a long list of standard questions grounded in time and space.
 
 The Standard Cross-Cultural Sample of Religion is “standard” in a different way than its namesake, The Standard Cross-Cultural Sample (SCCS). 
 The SCCS was designed to control for region and cultural relatedness. 
@@ -15,10 +14,9 @@ As the DRH grows, top-down data-gathering pushes will be targeted at underrepres
 
 The Standard Cross-Cultural Sample of Religion (SCCSR.v1) is provided under CC-BY-4.0 license. 
 
-The primary entry into the data is via the files provided in the `data_clean/` directorty.
+The primary entry into the data is via the files provided in the `data_clean/` directory.
 This consists of seven `.csv` files of different elements of the database. 
 The variables of each table are documented in the [README file](https://github.com/religionhistory/drh-data-dump/blob/main/data_clean/README.md) in `data_clean/`. 
-
 
 Name | Description
  --- | --- 
@@ -34,7 +32,7 @@ Name | Description
 When using DRH data, please reference both: 
 
 * the DRH site ([religiondatabase.org](https://religiondatabase.org))
-* Slingerland, E., M. W. Monroe and M. Muthukrishna (2023). "The Database of Religious History (DRH): ontology, coding strategies and the future of cultural evolutionary analyses." Religion, Brain & Behavior 14(2): 131-160. Available at https://eprints.lse.ac.uk/119500/.
+* Slingerland, E., M. W. Monroe and M. Muthukrishna (2023). "The Database of Religious History (DRH): ontology, coding strategies and the future of cultural evolutionary analyses." Religion, Brain & Behavior 14(2): 131-160. https://doi.org/10.1080/2153599X.2023.2200825 Available at https://eprints.lse.ac.uk/119500/.
 
 ### Data Curation
 * Scripts to extract data in `data_dump` (extracted to `data_raw`). The database backup is too large the include, so analysis can be reproduced from the extracted tables in `data_raw`. 
