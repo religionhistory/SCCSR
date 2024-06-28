@@ -1,5 +1,5 @@
 # Overview
-The Standard Cross-Cultural Sample of Religion is a product of the [Database of Religious History(DRH)](https://religiondatabase.org). 
+The Standard Cross-Cultural Sample of Religion is a product of the [Database of Religious History (DRH)](https://religiondatabase.org). 
 The DRH is a qualitative-quantitative encyclopedic database of historical religious data across time and space. 
 Data are contributed to the project by academic [experts](https://religiondatabase.org/landing/about/people/experts) and overseen by a panel of [editors](https://religiondatabase.org/landing/about/people/editors).
 The data take the form of answers (provided by experts) to a long list of standard questions grounded in time and space.
