@@ -14,8 +14,7 @@ As the DRH grows, top-down data-gathering pushes will be targeted at underrepres
 
 The Standard Cross-Cultural Sample of Religion (SCCSR.v1) is provided under CC-BY-4.0 license. 
 
-The primary entry into the data is via the files provided in the `data_clean/` directory.
-This consists of seven `.csv` files of different elements of the database. 
+The primary entry into the data is via the `drh_tables.zip` file provided in the `data_clean/` directory. This consists of seven `.csv` files of different elements of the database. 
 The variables of each table are documented in the [README file](https://github.com/religionhistory/drh-data-dump/blob/main/data_clean/README.md) in `data_clean/`. 
 
 Name | Description
@@ -38,9 +37,13 @@ When using DRH data, please reference both:
 * Scripts to extract data in `data_dump` (extracted to `data_raw`). The database backup is too large the include, so analysis can be reproduced from the extracted tables in `data_raw`. 
 * Data curation done in `process_data` (writing to `data_clean`). 
 * The preprocessed tables are documented in the [README file](data_clean/README.md) in `data_clean`. 
+* With access to a `postgres.dump.tar` backup placed in the project root directory and Docker Desktop installed, you can generate the clean data simply by running ./run_all_in_docker.sh from the root direcotory. This will extract and curate the database tables in data_clean/drh_tables.zip.
 
 ## Affiliation and Funding
 The DRH is housed at the University of British Columbia, and has been funded by generous grants from Canada’s Social Sciences and Humanities Research Council (SSHRC), The John Templeton Foundation, and Templeton Religion Trust.
 
 ## Version 1
 Based on database backup from 2024-06-23
+
+## Version 2
+Based on database backup from 2025-02-25

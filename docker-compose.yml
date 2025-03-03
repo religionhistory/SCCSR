@@ -1,0 +1,22 @@
+version: '3'
+services:
+  db:
+    image: postgis/postgis:14-3.2
+    container_name: drh_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+
+  worker:
+    build: .
+    container_name: drh_worker
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    tty: true
+    environment:
+      PGPASSWORD: postgres
+    command: ["bash", "-c", "./generate_clean_data.sh /app/postgres.dump.tar"]
